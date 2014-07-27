@@ -15,7 +15,9 @@ The MeansTidyDataSet is a further consolidation of the TidyDataSet. It consists 
 #Variables Description
 
 *Subject: ID of the person who performed the test. Values range from 1 to 6.
+
 *Activity: Activity that the subject doing the test performed. There are 6 possible values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+
 *In addition, the following 79 variables were used from the orignal dataset, and they represent the Mean and Standard Deviation of the original tests mesurements.
 
 	tBodyAcc_mean___X; tBodyAcc_mean___Y; tBodyAcc_mean___Z; tBodyAcc_std___X; tBodyAcc_std___Y; tBodyAcc_std___Z; tGravityAcc_mean___X; tGravityAcc_mean___Y; tGravityAcc_mean___Z; 
@@ -35,17 +37,29 @@ The MeansTidyDataSet is a further consolidation of the TidyDataSet. It consists 
 The following steps were followed to process the data:
 
 01: Use Notepad++ to remove numeric ID from features.txt and leave only the text description for ease of import.
+
 02: Load global data (libraries to be used and common data like features and activity labels).
+
 03: Load training data (load data from y_train.txt, subject_train.txt and x_train.txt files).
+
 04: Load test data (load data from y_test.txt, subject_test.txt and x_train.txt files).
+
 05: Assign column names to the "x" data sets based on the features data imported in step 02.
+
 06: Consolidate test data set (consolidate the dataset created in step 04 into a single "test" dataset).
+
 07: Consolidate training data set (consolidate the dataset created in step 03 into a single "training dataset).
+
 08: Consolidate both data sets (unite the data from the "test" and the "training" dataset into a single dataset).
+
 09: Subset the consolidated dataset based on columns (remove any column that doesn't pertain to a mean or standard deviation, excluding the subject and activity columns).
+
 10: Replace Activity labels for descriptive text & create the first tidy dataset (make sure that each row has a descriptive text value in the "Activity" column).
+
 11: Create second tidy dataset (calculate the mean for all variable fields pivoting on the "Subject" and "Activity" fields.
+
 12: Write datasets to the respective text file (TidyDataSet.txt and MeansTidyDataSet.txt).
+
 
 #Signature
 Diego Alfaro Bergueiro
